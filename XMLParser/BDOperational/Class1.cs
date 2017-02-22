@@ -8,5 +8,6 @@ namespace BDOperational
 {
     public class Class1
     {
+       // івпваива
     }
 }

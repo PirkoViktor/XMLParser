@@ -8,6 +8,5 @@ namespace File
 {
     public class Class1
     {
-       public int romazui;
     }
 }

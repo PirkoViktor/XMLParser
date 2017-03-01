@@ -13,3 +13,6 @@ C:\Users\corov\Documents\XMLParser\XMLParser\XMLParser\obj\Debug\UI.csproj.Gener
 C:\Users\corov\Documents\XMLParser\XMLParser\XMLParser\obj\Debug\XMLParser.exe
 C:\Users\corov\Documents\XMLParser\XMLParser\XMLParser\obj\Debug\XMLParser.pdb
 C:\Users\corov\Documents\XMLParser\XMLParser\XMLParser\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\djosa\Documents\XMLParser\XMLParser\XMLParser\bin\Debug\XMLParser.exe.config
+C:\Users\djosa\Documents\XMLParser\XMLParser\XMLParser\obj\Debug\XMLParser.exe
+C:\Users\djosa\Documents\XMLParser\XMLParser\XMLParser\obj\Debug\XMLParser.pdb

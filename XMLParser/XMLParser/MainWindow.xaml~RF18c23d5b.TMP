@@ -4,12 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XMLParser"
-        xmlns:ViewModel="clr-namespace:XMLParser.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="800">
-    <Window.DataContext>
-        <ViewModel:ViewModelWindow/>
-    </Window.DataContext>
     <Window.Resources>
         <Style x:Key="GeneralStyle" TargetType="{x:Type Control}">
             <Setter Property="OverridesDefaultStyle" Value="True" />
@@ -76,31 +72,23 @@
             </Setter>
         </Style>
     </Window.Resources>
-
+   
     <Grid>
         <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="260,107,0,0" VerticalAlignment="Top" Height="499" Width="522"/>
-        <ListBox x:Name="listBox"  ItemsSource="{Binding TableHeaders}"  HorizontalAlignment="Left" Height="425" Margin="10,181,0,0" VerticalAlignment="Top" Width="236"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="499" Margin="10,107,0,0" VerticalAlignment="Top" Width="236"/>
         <Menu x:Name="menu" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="772">
             <Menu.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
                     <GradientStop Color="White" Offset="1"/>
                 </LinearGradientBrush>
-
+                
             </Menu.Background>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
-                <Button x:Name="Menu1"  Style="{StaticResource BtnStyle}" Content="OpenFile">
-
-                </Button>
-                <Button x:Name="Menu2"  Style="{StaticResource BtnStyle}" Content="Action1">
-
-                </Button>
-                <Button x:Name="Menu3"  Style="{StaticResource BtnStyle}" Content="Action2">
-
+                <Button x:Name="Menu1"  Style="{StaticResource BtnStyle}" Content="A">
                 </Button>
             </StackPanel>
         </Menu>
-        <Label x:Name="label" Content="AilableTables" HorizontalAlignment="Left" Margin="12,116,0,0" VerticalAlignment="Top" Height="60" Width="234"/>
 
     </Grid>
 </Window>

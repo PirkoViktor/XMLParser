@@ -13,5 +13,6 @@ namespace XMLParser
     /// </summary>
     public partial class App : Application
     {
+
     }
 }

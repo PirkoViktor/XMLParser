@@ -38,13 +38,4 @@ namespace Parser
         }
     }
 
-    public class P
-    {
-        static void Main(string[] args)
-        {
-            XmlParser p = new XmlParser("doc.xml");
-            DataSet ds = p.GetData();
-            DataTable dt=ds.Tables[0];
-        }
-    }
 }

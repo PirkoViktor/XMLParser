@@ -53,6 +53,24 @@
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BDOperational\BDOperational.csproj">
+      <Project>{b554dc9c-812a-457e-91e2-f8fa83b161e9}</Project>
+      <Name>BDOperational</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\File\File.csproj">
+      <Project>{308d0236-6e26-417d-a8e8-9d9d9dfa5a11}</Project>
+      <Name>File</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Parser\Parser.csproj">
+      <Project>{89a938f4-03c5-4cb5-9888-a3ff3fc2b051}</Project>
+      <Name>Parser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XMLParser\UI.csproj">
+      <Project>{d23b7ae7-d5ef-4e1b-b6c8-bccf72d50bf6}</Project>
+      <Name>UI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

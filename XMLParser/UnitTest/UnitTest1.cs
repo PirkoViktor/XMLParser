@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+using  BDOperational;
 namespace UnitTest
 {
     [TestClass]
@@ -9,6 +9,8 @@ namespace UnitTest
         [TestMethod]
         public void TestMethod1()
         {
+            ConnectionSettings a = new ConnectionSettings();
+            a.Data_Source 
         }
     }
 }

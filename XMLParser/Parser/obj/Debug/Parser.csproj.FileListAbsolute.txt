@@ -1,0 +1,4 @@
+C:\Users\djosa\Documents\XMLParser\XMLParser\Parser\bin\Debug\Parser.dll
+C:\Users\djosa\Documents\XMLParser\XMLParser\Parser\bin\Debug\Parser.pdb
+C:\Users\djosa\Documents\XMLParser\XMLParser\Parser\obj\Debug\Parser.dll
+C:\Users\djosa\Documents\XMLParser\XMLParser\Parser\obj\Debug\Parser.pdb

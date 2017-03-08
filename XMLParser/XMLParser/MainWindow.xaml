@@ -78,7 +78,7 @@
     </Window.Resources>
 
     <Grid>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="260,107,0,0" VerticalAlignment="Top" Height="499" Width="522"/>
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" HorizontalAlignment="Left" Margin="260,107,0,0" VerticalAlignment="Top" Height="499" Width="522"/>
         <ListBox x:Name="listBox"  ItemsSource="{Binding TableHeaders}"  HorizontalAlignment="Left" Height="425" Margin="10,181,0,0" VerticalAlignment="Top" Width="236"/>
         <Menu x:Name="menu" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="772">
             <Menu.Background>
@@ -89,7 +89,7 @@
 
             </Menu.Background>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
-                <Button x:Name="Menu1"  Style="{StaticResource BtnStyle}" Content="OpenFile">
+                <Button x:Name="Menu1"  Style="{StaticResource BtnStyle}" Content="OpenFile" Click="Menu1_Click">
 
                 </Button>
                 <Button x:Name="Menu2"  Style="{StaticResource BtnStyle}" Content="Action1">

@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Parser;
-
+using BDOperational;
 namespace XMLParser
 {
     /// <summary>
@@ -25,14 +25,27 @@ namespace XMLParser
         public MainWindow()
         {
             InitializeComponent();
-            DataTable dt = new XmlParser("doc.xml").GetData().Tables[0] ;
-            dataGrid.DataContext = dt.DefaultView;
+            
+        
 
         }
 
         private void Menu1_Click(object sender, RoutedEventArgs e)
         {
+            ConnectionSettings con;
+            con.Data_Source = "PIRKO-VV\\PIRKO";
+            con.Initial_Catalog = "Learning";
+            con.user_name = "rg";
+            NorthwindDataSet n = new NorthwindDataSet();
 
+            DataTable data;
+            data = new XmlParser("doc.xml").Parse().Tables[0];
+            n.insert(con, data);
+        }
+
+        private void Menu2_Click(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = new XmlParser("doc.xml").Parse().Tables[0].DefaultView;
         }
     }
 }

@@ -92,7 +92,7 @@
                 <Button x:Name="Menu1"  Style="{StaticResource BtnStyle}" Content="OpenFile" Click="Menu1_Click">
 
                 </Button>
-                <Button x:Name="Menu2"  Style="{StaticResource BtnStyle}" Content="Action1">
+                <Button x:Name="Menu2"  Style="{StaticResource BtnStyle}" Content="Action1" Click="Menu2_Click">
 
                 </Button>
                 <Button x:Name="Menu3"  Style="{StaticResource BtnStyle}" Content="Action2">

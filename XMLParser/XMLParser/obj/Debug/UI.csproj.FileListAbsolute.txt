@@ -30,7 +30,7 @@ C:\Users\djosa\Documents\XMLParser\XMLParser\XMLParser\obj\Debug\XMLParser.Prope
 C:\Users\djosa\Documents\XMLParser\XMLParser\XMLParser\obj\Debug\UI.csproj.GenerateResource.Cache
 C:\Users\djosa\Documents\XMLParser\XMLParser\XMLParser\bin\Debug\BDOperational.dll
 C:\Users\djosa\Documents\XMLParser\XMLParser\XMLParser\bin\Debug\File.dll
-C:\Users\djosa\Documents\XMLParser\XMLParser\XMLParser\bin\Debug\Parser.dll
 C:\Users\djosa\Documents\XMLParser\XMLParser\XMLParser\bin\Debug\BDOperational.pdb
 C:\Users\djosa\Documents\XMLParser\XMLParser\XMLParser\bin\Debug\File.pdb
 C:\Users\djosa\Documents\XMLParser\XMLParser\XMLParser\bin\Debug\Parser.pdb
+C:\Users\djosa\Documents\XMLParser\XMLParser\XMLParser\bin\Debug\Parser.exe

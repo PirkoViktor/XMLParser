@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 namespace BDOperational
 {
 
-    struct ConnectionSettings
+   public struct ConnectionSettings
     {
 
         public string Data_Source;
@@ -18,21 +18,21 @@ namespace BDOperational
     }
 
 
-    class NorthwindDataSet
+  public  class NorthwindDataSet
     {
         public void select(ConnectionSettings set, string table)
         {
 
-            string connectionString = "Data Source=(" + set.Data_Source + "); " + "Initial Catalog=" +
-                                      set.Initial_Catalog + ";" + "Integrated Security = SSPI";
+            string connectionString = "Data Source=" + set.Data_Source + "; " + "Initial Catalog=" +
+                                      set.Initial_Catalog + "; " + "Integrated Security = TRUE;";
             ConnectToData(connectionString, table);
         }
 
         public void insert(ConnectionSettings set, DataTable table)
         {
 
-            string connectionString = "Data Source=(" + set.Data_Source + "); " + "Initial Catalog=" +
-                                      set.Initial_Catalog + ";" + "Integrated Security = SSPI";
+            string connectionString = "Data Source=" + set.Data_Source + ";  " + "Initial Catalog=" +
+                                      set.Initial_Catalog + ";" + "Integrated Security = TRUE;";
             ConnectToData1(connectionString, table);
         }
 
@@ -77,21 +77,35 @@ namespace BDOperational
             using (SqlConnection connection =
                 new SqlConnection(connectionString))
             {
-                string commandline = "SELECT * FROM " + table.TableName + '"';
+                string commandline = "SELECT * FROM " + table.TableName ;
                 connection.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter(commandline, connection);
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
 
-                DataTable dt = ds.Tables[0];
-
-                foreach (var tab in table.Rows)
+             
+                foreach ( DataRow tab in table.Rows)
                 {
-                    dt.Rows.Add(tab);
+                    try
+                    {
+                        ds.Tables[0].ImportRow(tab);
+                    }
+                    catch(Exception e)
+                    {
+                                           
+                    }
                 }
                 // создаем объект SqlCommandBuilder
                 SqlCommandBuilder commandBuilder = new SqlCommandBuilder(adapter);
-                adapter.Update(ds);
+                
+                try
+                {
+                    adapter.Update(ds);
+                }
+                catch (Exception e)
+                {
+
+                }
                 // альтернативный способ - обновление только одной таблицы
                 //adapter.Update(dt);
                 // заново получаем данные из бд

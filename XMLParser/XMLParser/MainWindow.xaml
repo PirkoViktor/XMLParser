@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:XMLParser"
         xmlns:ViewModel="clr-namespace:XMLParser.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="800">
+        Title="XML Parser 9000" Height="800" Width="800">
     <Window.DataContext>
         <ViewModel:ViewModelWindow/>
     </Window.DataContext>
@@ -83,7 +83,7 @@
         <Menu x:Name="menu" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="772">
             <Menu.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="Aquamarine" Offset="0"/>
                     <GradientStop Color="White" Offset="1"/>
                 </LinearGradientBrush>
 

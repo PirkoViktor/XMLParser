@@ -14,7 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Parser;
-
+using Microsoft.Win32;
+using System.IO;
 namespace XMLParser
 {
     /// <summary>
@@ -29,10 +30,25 @@ namespace XMLParser
             dataGrid.DataContext = dt.DefaultView;
 
         }
-
+        static int i = 0;
         private void Menu1_Click(object sender, RoutedEventArgs e)
         {
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            dlg.FileName = "Document"; // Default file name
+            dlg.DefaultExt = ".xml"; // Default file extension
+            dlg.Filter = "Text documents (.xml)|*.xml"; // Filter files by extension
 
+            // Show open file dialog box
+            Nullable<bool> result = dlg.ShowDialog();
+
+            // Process open file dialog box results
+            if (result == true)
+            {
+                // Open document
+                string filename = dlg.FileName;
+                listBox.Items[i] = filename;
+                i++;
+            }
         }
     }
 }

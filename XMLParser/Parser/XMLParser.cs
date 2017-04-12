@@ -18,7 +18,15 @@ namespace Parser
         {
 
             document = new XDocument();
-            document= XDocument.Load(filename);
+            try
+            {
+                document = XDocument.Load(filename);
+            }
+            catch (Exception)
+            {
+
+            }
+
         }
 
         public DataSet GetData()
@@ -26,7 +34,7 @@ namespace Parser
 
 
             DataSet resultDataSet = new DataSet();
-            using (XmlReader xr= document.CreateReader())
+            using (XmlReader xr = document.CreateReader())
             {
                 resultDataSet.ReadXml(xr);
             }
@@ -39,7 +47,7 @@ namespace Parser
 
             var rootElement = document.Root;
 
-            var tableNames =rootElement.Elements().GroupBy(c=>c.Name).Select(c=>c.Key);
+            var tableNames = rootElement.Elements().GroupBy(c => c.Name).Select(c => c.Key);
 
             DataSet ds = new DataSet();
 
@@ -52,10 +60,10 @@ namespace Parser
                 {
                     dt.Columns.Add(column.Name.ToString());
                 }
-                
-                foreach (var tableElement in rootElement.Elements().Where(c => c.Name==name))
+
+                foreach (var tableElement in rootElement.Elements().Where(c => c.Name == name))
                 {
-                    List<String> columnValues=new List<string>();
+                    List<String> columnValues = new List<string>();
                     for (int i = 0; i < tableElement.Elements().Count(); i++)
                     {
                         columnValues.Add(tableElement.Elements().ToArray()[i].Value);
@@ -69,7 +77,7 @@ namespace Parser
 
         private bool CheckDocument()
         {
-           // document.
+            // document.
             return true;
         }
     }
